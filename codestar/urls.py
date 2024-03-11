@@ -19,7 +19,8 @@ from django.urls import path, include
 import blog.urls  # Import the module containing the URL configurations for your blog
 
 urlpatterns = [
-    path('', include("blog.urls")),  # Include the URL configurations for your blog
     path('admin/', admin.site.urls),
+    path('summernote/', include('django_summernote.urls')),
+    path('', include("blog.urls")),  # Include the URL configurations for your blog
 ]
 
